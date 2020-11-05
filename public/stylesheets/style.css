@@ -1,0 +1,26 @@
+body {
+  font-family: "arial", serif;
+  color: black;
+  height: 100%;
+  /*background-image: url(../imagenes/fondo.jpeg);*/
+}
+
+html{
+  height: 100%;
+}
+
+li{
+  list-style: none
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  color: black; 
+  text-decoration: none;
+}
+
+
+

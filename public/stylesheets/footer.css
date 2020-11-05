@@ -1,0 +1,38 @@
+/*FOOTER ------------------ */
+
+.footer{
+    box-sizing: border-box;
+    height: 8vh;  
+    color: black;
+    width: 100%; 
+    font-size: 13px;
+    bottom: 0px;
+    background-color: rgb(78, 162, 214);
+  }
+  
+  .footerMenu{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-direction: row;  
+  }
+  
+  
+  .footerMenu li{
+    margin-left: 0px;
+    padding: 0px 05px
+  }
+  
+  .footerRedes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: flex-end;
+  
+  }
+  
+  .footerRedes li{
+    padding: 0px 5px;
+  }
+  

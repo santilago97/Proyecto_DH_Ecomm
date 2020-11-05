@@ -1,0 +1,78 @@
+<%- include('../partials/header'); %>
+<link rel="stylesheet" href="/stylesheets/login.css">
+
+<script src="/js/login.js"></script>
+
+<section class="todoLogIn">
+    
+    <div class="cajaLogIn">
+        <div class="tituloFormulario">
+            <div class="logo">               
+                <a href="/" ><i class="fab fa-stripe-s"></i></a>
+                <a href="/" class="tituloHead">SportWear<a>                          
+            </div>
+            <h1 id="tituloLogin">Iniciar sesión</h1>
+        </div>
+        
+        <div>
+            <% if (typeof errors != 'undefined') { %>
+                <ul>
+                    <% for (let i = 0; i < errors.length; i++) { %>
+                        <li>
+                            <%= errors[i].msg %>
+                        </li>
+                        <% } %>
+                    </ul>
+                    <% } %>
+                </div>
+                
+                
+                <form class="formulario formularioLogin" action="login" method="POST">
+                    <div class="logueo">
+                        
+                        <div class="input-group mb-3 userImput">
+                            <div class="input-group-prepend">   
+                                <div class="input-group-text iconos far fa-envelope inputCompletar"></div>
+                            </div>
+                            <input type="text" class="form-control inputCompletar email" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"  type="email" id="email" name="email" placeholder="username" value="">
+
+                            <div class="invalid-feedback"><%= errors.email ? errors.email.msg : ''%></div>
+                        </div>
+                        
+                        <div class="input-group mb-3 loginImput passImput">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text iconos fas fa-user-lock inputCompletar"></div>
+                            </div>                       
+                            <input type="password" class="form-control inputCompletar password verPassword" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="password" id="inputPassword" placeholder="password">  
+                            <div id="pass-mostrar" class="far fa-eye"></div>
+                            
+                            <div class="invalid-feedback"><%= errors.password ? errors.password.msg : ''%></div>
+                        </div>
+                        
+                        <div class="input-group mb-3 align">
+                            
+                            <input type="checkbox" class="rememberMe" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" type="rememberMe" name="rememberMe" id="rememberMe">
+                            
+                            <div class="">
+                                <label class="rememberLabel" id="inputGroup-sizing-default">Recordarme</label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="div-boton-reg boton-login">
+                        <button class="btn btn-info" type="submit" >Confirmar</button>
+                    </div>
+                    
+                    <div>
+                        <p class="align">¿No tenés cuenta? Clickeá <a href="/auth/register" class="reg">acá</a> para crearte una</p>
+                    </div>
+                    
+                    
+                </form>
+            </div>
+        </section>
+        
+        <%- include('../partials/footer'); %>
+        
+    </div>

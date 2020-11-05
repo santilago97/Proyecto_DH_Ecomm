@@ -1,0 +1,131 @@
+.sectionProductDetail{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url(../imagenes/fondo.jpeg);
+}
+
+.product-detail-container{
+  width: 94%; 
+  justify-content: center;
+  border: gray 1px solid;
+  border-radius: 5px;
+  height: fit-content;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  background-color: white;
+}
+img {
+  width:80%;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.btnProdDetail{
+  justify-content: space-between;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+.coment{
+  height: 5vh;
+  width: 100%;
+  height: fit-content;
+}
+
+.selectorProducto{
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.estilotextarea {width:400px;
+  height:100px;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+
+@media (min-width : 426px){
+  .product-detail-container{
+    width: 90%;  
+    border-radius: 5px;
+    height: fit-content;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .btnProdDetail{
+    justify-content: space-between;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  img {
+  width:70%;
+  margin-right: 15%;
+  margin-left: 15%;
+  }
+}
+
+
+@media(min-width: 469px){
+  .product-detail-container{
+    width: 80%; 
+    justify-content: center;
+    border-radius: 5px;
+    height: fit-content;
+    margin-left: 10%;
+    margin-right: 10%; 
+  }
+
+  .btnProdDetail{
+    justify-content: space-between;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;  
+  }
+
+  img {
+  width:60%;
+  margin-right: 20%;
+  margin-left: 20%;
+  }
+}
+
+@media(min-width: 769px){
+  .product-detail-container{
+    width: 60%; 
+    justify-content: center;
+    border-radius: 5px;
+    height: fit-content;
+    margin-left: 20%;
+    margin-right: 20%
+  }
+  .btnProdDetail{
+    justify-content: space-between;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;  
+  }  
+}

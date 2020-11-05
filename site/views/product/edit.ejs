@@ -1,0 +1,63 @@
+<%- include('../partials/header'); %> 
+
+<link rel="stylesheet" href='/stylesheets/productAddEdit.css'>
+<script src="/js/create.js"></script>
+
+<section class="todoCreate">
+
+    <div class="create">
+
+<div class="global">
+    
+    <h1></h1>
+    <form action="/product/<%= product.id %>?_method=PUT" method="POST" class="formCreate" enctype="multipart/form-data">
+        <h3>Editar Producto <%= product.id %></h3>   
+        <div class="form-group ">
+            <label class="" for="title">Nombre de producto</label>
+            <input type="text" class="form-control nombreProdCreate" id="title" placeholder="Title" name="name" value="<%= product.name %>">
+        </div>
+        
+        <div class="form-group ">
+            <label class="" for="title">Descripcion de producto</label>           
+            <textarea name="description" id="" cols="10" rows="5" class="form-control descrProdCreate"><%= product.description %></textarea>
+        </div>
+        
+        <div class="form-group ">
+            <label class="" for="title">Imagen</label>
+            <input type="file" class="form-control" id="image" placeholder="Image" name="image" value="<%= product.image %>" accept="image/x-png,image/gif,image/jpeg, image/jpg">
+        </div>
+        
+        <div class="form-group ">
+            <label class="" for="category">Categoria</label>
+            <select name="idCategory" id="categoria" class="form-control categoriaProd">
+                <option value="">--Seleccione--</option>></option>
+                <% for(let categoria of category) { %>
+                    <option value="<%= categoria.id %>"
+                        <% if (product.idCategory == categoria.id) {%> selected <% } %>><%= categoria.description %></option>
+                    <% } %> 
+                </select>
+            </div>
+            
+            <div class="form-group ">
+                <label class="" for="title">Precio</label>
+                <input type="text" class="form-control  precioProdCreate" id="image" name="price" value="<%= product.price %>">
+                
+            </div>
+            
+            <div class="botones-product-add">
+                
+                <button type="submit" class="btn btn-success" value="Update">Editar Publicación</button>
+                
+                <button type="reset" class="btn btn-secondary">Resetear campos</button>
+            </div>
+            
+            
+        </form>
+        
+        <a class="btnEliminar btn btn-danger" href="/product/<%= product.id %>?_method=DELETE">Eliminar</a>
+
+    </div>
+    
+    </section>
+
+    <%- include('../partials/footer'); %>

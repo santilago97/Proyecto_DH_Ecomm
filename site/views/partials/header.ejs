@@ -1,0 +1,109 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1cc22e00f7.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <script src="https://kit.fontawesome.com/1cc22e00f7.js" crossorigin="anonymous"></script>
+    
+    <title>SportWear</title>
+</head>
+
+
+<body>
+    
+    <header class="header">
+        
+        <section class="mainContainer">
+            
+            <div class="logo">               
+                <a href="/" ><i class="fab fa-stripe-s" ></i></a>
+                <a href="/" class="tituloHead">SportWear</a>                          
+            </div>
+                
+            <div class="buscador">               
+                    <form action="/product" method="GET" class="forms formtBuscador">
+                        <div class="input-group ">  
+                                <input type="text" class="form-control " placeholder="Buscar" name="busqueda">
+                                <button type="submit" class="fas fa-search" ></button>                           
+                        </div>
+                    </form>
+            </div>
+            
+            
+            
+            <div class="loginReg">
+                
+                <ul class="listUl">
+                    
+                    <li><a class="btnColor" href="/product">Productos</a></li>
+
+                    <% if (locals.logeado) {%>
+                    
+                    <li ><a class="btnColor" href="/product/create">Publicar</a></li>
+                                  
+                    <li><a class="btnColor"  href="/auth/profile">Perfil</a></li>
+                
+                    <li><form class="formulario" action="/auth/LogOut" method="POST">
+                           <button type="submit" class=" botonLogRed btn btn-secondary">LogOut</button>
+                    </form></li>                                          
+                    
+                    <li><a class="btnColor btnCarrito" href="/cart/index"><i class="fas fa-shopping-cart"></i>
+                        <span id="cart_menu_num" class="badge rounded-circle">2</span>
+                    </a></li>  
+                                     
+                
+                    <% } else { %>                        
+                    
+                    <li class="menuBarra"><a  class="btnColor" href="/auth/login">LogIn</a></li>                   
+                    
+                    <li><a  class="btnColor" href="/auth/register">Registro</a></li>
+                 
+                <% } %>
+
+                </ul> 
+
+            </div>
+                 
+                        
+                <div class="dropdown">
+                            
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bars"></i>
+                    </button>
+                            
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="/">Inicio</a>
+                        <a class="dropdown-item" href="#">Categorias</a>
+                        <a class="dropdown-item" href="/product/create">Publicar</a>
+                        <a class="dropdown-item" href="/product">Productos</a>
+                        <a class="dropdown-item" href="#">Ayuda</a>
+                                
+                        <div class="dropdown-divider"></div>
+                                
+                    <% if (locals.logeado) {%>
+                                    
+                        <a class="dropdown-item" href="/auth/profile">Perfil</a>
+                        <a class="dropdown-item" href="/cart/index">Carrito</a>
+                            <form class="formulario" action="/auth/LogOut" method="POST">
+                                <button class="dropdown-item" type="submit" class="ConfLogIn">LogOut</button>
+                            </form>
+                                    
+                                    
+                    <% } else { %>
+                                        
+                        <a class="dropdown-item" href="/auth/login">Login</a>
+                        <a class="dropdown-item" href="/auth/register">Register</a>  
+                                        
+                                        
+                    <% } %>
+                    </div>
+                                    
+                </div>
+                                
+            </section>                                   
+                        
+    </header>

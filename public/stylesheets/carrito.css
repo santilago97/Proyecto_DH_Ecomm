@@ -1,0 +1,74 @@
+
+/* CARRITO */
+
+#elemento{
+    padding: 0px 15px;
+  }
+  
+  #product-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 10px;
+    border-bottom: 1px solid rgb(194, 187, 187);
+    margin-left: 30px;
+  }
+  
+  #chart-title{
+    padding: 20px;
+  }
+  
+  .quantity{
+    width: 30px;
+  }
+
+  .botonesAgregarQuitar{
+    font-size: 20px;
+  }
+
+  .precio{
+    
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .precioProd{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  
+  .total-container{
+  
+    width: 150px;
+    margin-left: 30px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+  }
+  
+  .mercadopago-button{
+    width: 17.8vw;
+    height: 5vh;
+  }
+
+  .buttons{
+    margin-top: 10px;
+  }
+  
+  /* PRODUCT ADD */
+  
+  .coment {
+    width: 90%;
+  }
+  .global{
+    margin: 25px;
+  }
+  
+  .botones-product-add{
+    margin-top: 10px;
+  }

@@ -1,0 +1,120 @@
+<%- include('../partials/header'); %>
+<link rel="stylesheet" href="/stylesheets/register.css">
+
+<script src="/js/register.js"></script>
+
+<section class="todoRegister">
+       
+    <section class="register">
+    <div class="tituloRegister">
+        <p><h1>Crear Perfil</h1></p>
+    </div>
+
+    <div>
+        <% if (typeof errors != 'undefined') { %>
+            <ul>
+            <% for (let i = 0; i < errors.length; i++) { %>
+                <li>
+                    <%= errors[i].msg %>
+                </li>
+                <% } %>
+            </ul>
+        <% } %>
+        </div>
+    
+
+    <div class="cajaRegister">
+        <form class="formRegister" action="register" method="POST" enctype="multipart/form-data">          
+            <div>
+                <div class="input-group input-group-sm mb-3 formRegistro">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text iconos fas fa-user inputRegister"></div>
+                    </div>
+                    <input type="text" class="form-control nombreUsuario inputRegister" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="text"  id="nombre" name="name" placeholder="nombre">
+                
+                    <div class="invalid-feedback"><%= errors.name ? errors.name.msg : ''%></div>
+                </div>  
+            </div>
+            
+            
+
+
+            <div>
+                <div class="input-group input-group-sm mb-3 formRegistro">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text iconos fas fa-user inputRegister"></div>
+                    </div>
+                    <input type="text" class="form-control inputRegister apellido" aria-label="Sizing example input " aria-describedby="inputGroup-sizing-sm" type="text" id="apellido" name="apellido" placeholder="apellido">
+                
+                <div class="invalid-feedback"><%= errors.apellido ? errors.apellido.msg : ''%></div>
+            </div>
+            </div>
+            
+           
+            <div>
+                <div class="input-group input-group-sm mb-3" class="formRegistro">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text iconos far fa-envelope inputRegister"></div>
+                    </div>
+                    <input type="text" class="form-control inputRegister" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="email"  id="email" name="email" placeholder="email">
+                
+                <div class="invalid-feedback"><%= errors.email ? errors.email.msg : ''%></div>
+            </div>
+            </div>
+           
+            
+
+            <div>
+                <div class="input-group input-group-sm mb-3" class="formRegistro">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text iconos fas fa-user-lock inputRegister"></div>
+                    </div>
+                    <input class="form-control password inputRegister" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="password" id="password" name="password" placeholder="password"> 
+                
+                <div class="invalid-feedback"><%= errors.password ? errors.password.msg : ''%></div>
+            </div>
+            </div>
+            
+            
+
+            <div>
+                <div class="input-group input-group-sm mb-3" class="formRegistro">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text iconos fas fa-user-lock inputRegister"></div>
+                    </div>
+                    <input class="form-control confirmarPassword inputRegister" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="password" id="password" name="confirmarPassword" placeholder="confirmar password">
+                
+                <div class="invalid-feedback"><%= errors.confirmarPassword ? errors.confirmarPassword.msg : ''%></div>
+            </div>
+
+            </div> 
+ 
+            <div class="form-group" class="formRegistro">
+                <label for="exampleFormControlFile1" class="avatar">Seleccione un Avatar (.jpg, .jpeg, .gif o .png)</label>
+                <input  type="file" class="form-control-file inputRegister" id="exampleFormControlFile1" name="avatar" accept="image/x-png,image/gif,image/jpeg, image/jpg" >
+                <div class="invalid-feedback"><%= errors.avatar ? errors.avatar.msg : ''%></div>
+            </div>
+            
+
+            <div class="div-boton-reg">
+                <button type="submit" class="btnReg btn btn-info">Crear Cuenta</button>
+            </div>
+        </div>
+        <div class="botonesFacbookGoogle">
+            <div>
+                <button type="submit" class="btnReg btn btn-primary">Registrar con Facebook</button>
+            </div>
+            <div>
+                <button type="submit" class="btnReg btn btn-success">Registrar con Google</button>
+            </div>
+        </div>
+    </form> 
+    
+</section>
+
+</section>
+
+
+
+<%- include('../partials/footer'); %>
+

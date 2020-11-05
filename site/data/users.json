@@ -1,0 +1,120 @@
+[
+ {
+  "name": "juan",
+  "apellido": "Caro",
+  "email": "juancruzzcaro@hotmail.com",
+  "password": "$2b$05$7QFysDxs4ciIXU9O0aGtvuFzceQMm.v10IPbkR/PLnuhbiM6YaKWu",
+  "avatar": "/imgUsers/avatar-1593295120856.jpg",
+  "id": 1
+ },
+ {
+  "name": "Santiago",
+  "apellido": "Lago",
+  "email": "santilago@hotmail.com",
+  "password": "$2b$05$7UeSIZp3tpBckphXJcuVpuoxmeyH6EfQINBK7CtWKddSUuXlOdaLS",
+  "avatar": "/imgUsers/avatar-1593295186114.jpg",
+  "id": 2
+ },
+ {
+  "name": "Juan",
+  "apellido": "Retori",
+  "email": "juancho@hotmail.com",
+  "password": "$2b$05$jFq/mcLoOvlbohiWsA675u25P09MhnBsI67Gf71a6zNMHI0LOjEZm",
+  "avatar": "/imgUsers/avatar-1593295223053.jpg",
+  "id": 3
+ },
+ {
+  "name": "santi",
+  "apellido": "lgo",
+  "email": "ff@gial.cm",
+  "password": "$2b$05$kJjotiFkZ3vhzc87cF79jezV0nstMEBNeZOgweRTq0s8A79oBMjf.",
+  "avatar": "public\\imgUsers\\avatar-1593439401815.png",
+  "id": 4
+ },
+ {
+  "name": "s",
+  "apellido": "ss",
+  "email": "ss@pq.com",
+  "password": "$2b$05$NHfW0AsuvJ.230YA/tRlM.qFVFsILGZHljKIc0.gcpDrG7kzLpxcG",
+  "avatar": "public\\imgUsers\\avatar-1593440276537.png",
+  "id": 5
+ },
+ {
+  "name": "qq",
+  "apellido": "qq",
+  "email": "qq@qq.com",
+  "password": "$2b$05$AePRbw1dqattxVDcBa3WVuFVdjUTP6CJjXie1wlFdxy9rBFK.KfiS",
+  "avatar": "/imgUsers/avatar-1593440454782.png",
+  "id": 6
+ },
+ {
+  "name": "aa",
+  "apellido": "aa",
+  "email": "aa@aa.com",
+  "password": "$2b$05$5FxdHaCY6NWmp1ix0Omc2Og5TCfFIGi/FFNS4Y0wpMpwaPNBa8KWC",
+  "avatar": "/imgUsers/avatar-1593440554024.png",
+  "id": 7
+ },
+ {
+  "name": "San ",
+  "apellido": "san ",
+  "email": "san@san.com",
+  "password": "$2b$05$1gb4HICLqWiNfpP2n6rz7emoK/lNqAZTEj/LYGLEUKE1W7S68PKEe",
+  "id": 8
+ },
+ {
+  "name": "dd",
+  "apellido": "ss",
+  "email": "eed@dee.com",
+  "password": "$2b$05$h/hCN6K0V/AV1O2grhKOmuZ74DwFAAqSOzAe4kRRkEEgVPUA8Fu7m",
+  "id": 9
+ },
+ {
+  "name": "juan",
+  "apellido": "asd",
+  "email": "j@j.com",
+  "password": "$2b$05$FiphYThK.RHkSzE60Hfr5OxnE0ktE3/WQxVTJCUES1rCLqOYF1upG",
+  "avatar": "/imgUsers/avatar-1595540173166.jpg",
+  "id": 10
+ },
+ {
+  "name": "Testing",
+  "apellido": "asd",
+  "email": "d@d.com",
+  "password": "$2b$05$b9IBrs5F/AKFPKfM0HelXecYzcj76PCC5277LZPGJGFExiTRsbL/G",
+  "avatar": "",
+  "id": 11
+ },
+ {
+  "name": "testing2",
+  "apellido": "asd",
+  "email": "asdd@asdd.com",
+  "password": "$2b$05$ZAc4BdPWXXrRRB2koZPA3ubUn64674.qljTZVY5HyL03m4Lnh4v.K",
+  "avatar": "",
+  "id": 12
+ },
+ {
+  "name": "ultimoTest",
+  "apellido": "asdads",
+  "email": "k@d.com",
+  "password": "$2b$05$7k/qEBBZT4x8cPkaB8KKB.Jc2Z3DpVVr0dUa8RQDS3.n6BPkA8tE.",
+  "avatar": "/imgUsers/avatar-1595540600275.pdf",
+  "id": 13
+ },
+ {
+  "name": "Santi",
+  "apellido": "Lago",
+  "email": "s.lagocurretti@gmail.com",
+  "password": "$2b$05$SHmUEiG3fGhxRoZf7JoVu.Ov0fTV1kZexiMGcIN5N.QxS.6nDnu.m",
+  "avatar": "/imgUsers/avatar-1595604235778.jpg",
+  "id": 14
+ },
+ {
+  "name": "Santi",
+  "apellido": "Lago",
+  "email": "gg@gg.com",
+  "password": "$2b$05$pMrSjGS0YDWdsuYRHkklVOaPvuehBSll2QHr4P7IFQ6KkeZO1VyUS",
+  "avatar": "",
+  "id": 15
+ }
+]

@@ -1,0 +1,65 @@
+<%- include('../partials/header'); %> 
+<link rel="stylesheet" href='/stylesheets/productAddEdit.css'>
+<script src="/js/create.js"></script>
+
+<section class="todoCreate">
+    <div class="create">
+        <div>
+            <% if (typeof errors != 'undefined') { %>
+                <ul>
+                <% for (let i = 0; i < errors.length; i++) { %>
+                    <li>
+                        <%= errors[i].msg %>
+                    </li>
+                    <% } %>
+                </ul>
+            <% } %>
+        </div> 
+    <form method="POST" action="/product/create" enctype="multipart/form-data" class="formCreate">
+       
+        <div class="form-group ">
+            <label class="" for="title">Nombre del producto</label>
+            <input type="text" class="form-control nombreProdCreate" id="title" placeholder="Title" name="name">
+        </div>
+
+        <div class="form-group ">
+            <label class="" for="title">Descripcion de producto</label>           
+            <textarea name="description" id="description" class="form-control descrProdCreate" rows="5" cols="10" placeholder= "Describa en breves palabras a su producto"></textarea>
+        </div>
+
+       
+        <div class="form-group ">
+            <label class="" for="title">Imagen</label>
+            <input type="file" class="form-control imgProdCreate" id="image" placeholder="Image" name="image" accept="image/x-png,image/gif,image/jpeg, image/jpg">
+        </div>
+
+
+        <div class="form-group ">
+            <label class="" for="title">Categoria</label>
+            <select name="idCategory" id="categoria" class="form-control categoriaProd">
+                <option value="">--Seleccione--</option>></option>
+                <% for(let categoria of category) { %>
+                    <option value="<%= categoria.id %>"><%= categoria.description %></option>
+                <% } %> 
+                </select>
+        </div>
+
+
+        <div class="form-group ">
+            <label class="" for="title">Precio</label>
+            <input type="number" class="form-control precioProdCreate"  id="title" placeholder="Establece un precio acorde" name="price">
+        </div>
+
+
+        <div class="botones-product-add">
+                
+            <button type="submit" class="btn btn-success">Enviar Publicación</button>
+                
+            <button type="reset" class="btn btn-danger">Borrar todo</button>
+        </div>
+    
+    </form>
+
+</div>
+</section>
+    <%- include('../partials/footer'); %>

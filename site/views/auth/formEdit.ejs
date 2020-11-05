@@ -1,0 +1,35 @@
+<%- include('../partials/header'); %>
+<html>
+<section class="todoProfile">
+    
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+    
+    <div class="profile">
+        
+        <form action="/auth/<%= userLogueado.id %>?_method=PUT" method="POST" class="formCreate" enctype="multipart/form-data">
+
+            <h2>Email registrado: <%= userLogueado.email %></h2>
+            
+            <img src= "<%= userLogueado.avatar %>" alt="imagen avatar">
+            
+            <label class="" for="title">Nombre</label>
+            <input type="text" class="" id="title" placeholder="Title" name="name" value="<%= userLogueado.name %>">
+            
+            <label class="" for="title">Apellido</label>
+            <input type="text" class="" id="title" placeholder="Title" name="apellido" value="<%= userLogueado.apellido %>">
+            
+            <br> <button type="submit" class="btn btn-success" value="Update">Guardar perfil</button>
+        </div>   
+
+        <div class="botones-product-add">
+            
+            
+            
+        </div>
+    </section>
+    
+    </html>
+    
+    
+    <%- include('../partials/footer'); %> 
+    

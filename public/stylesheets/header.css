@@ -1,0 +1,205 @@
+/* ----Parte Uno ----*/
+
+header{
+  background-color: rgb(78, 162, 214);
+ 
+}
+.mainContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 5px; 
+  padding-bottom: 5px; 
+}
+
+#cart_menu_num {
+  
+  background: green;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 12px;
+}
+
+.logo{
+ 
+  flex-wrap: nowrap; 
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  margin-left: 10px;
+  margin-right: 5px;
+  font-size: larger;
+  width: auto;
+  
+}
+
+.tituloHead{
+  display: none;
+}
+
+.buscador{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formBuscador{
+  width: max-content;
+}
+
+
+.loginReg{
+display: none
+}
+
+.dropdown {
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+  margin-right: 5px;
+
+}
+  
+.barraSecuncadiaList{
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: space-around;
+  flex-direction: row;
+  padding: auto 0; 
+}
+
+.barraSecundaria{
+  display: none;
+}
+
+@media(min-width : 550px){
+  .tituloHead{
+    display: block;
+  }
+
+  .dropdown-toggle{
+    width: 100px;
+  }
+
+
+  .formBuscador{
+    width: max-content;
+  }
+}
+
+
+@media(min-width : 700px){
+
+  .btnCarrito{
+    display: flex;
+    
+    flex-direction: row;
+    font-size: 25px;
+  }
+
+  .mainContainer{
+    width: 100%;
+    flex-wrap: wrap;
+    padding-bottom: 0px; 
+    padding-top: 0px; 
+  }
+
+
+  .loginReg {
+    display: flex;
+    flex-wrap:nowrap;
+    justify-content: center;
+    flex-direction:column;
+    align-items: flex-end;
+    width: 400px; 
+    /* REVISAR COMO SE CORRE LA BARRA BUSCADOR*/
+  }
+  
+  .listUl{
+    display:flex;
+    flex-wrap: wrap;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    height: 50px;
+    
+  }
+  
+  .listUl li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+       
+  }
+
+
+  .listUl li:hover{
+    background-color: rgba(26, 115, 170, 0.753);
+  }
+
+  .listUl li a{
+  padding: auto;
+  }
+
+
+  a.btnColor{
+    color: white;
+   
+  }
+
+  a.btnColor:hover{
+    color: white;
+  }
+
+ .logo{
+   width: 30px ;
+  }
+ 
+  .tituloHead{
+  display: none;
+  }
+  
+  .inputBuscador{
+    width: 100%
+  }
+
+  .dropdown {
+    display: none
+  }
+
+  .barraInferior{
+    width: 100%;
+  }
+
+  .botonesBarraSec:hover{
+    font-weight: bolder;
+  }
+}
+@media(min-width : 800px){
+  .buscador{
+    width : 350px
+  }
+
+  .formtBuscador{
+    width: max-content;
+  }
+
+}
+@media(min-width : 1100px){
+  
+  .logo{
+    width: 200px;
+  }
+
+  .tituloHead{
+    display: block; 
+  }
+}
+
+

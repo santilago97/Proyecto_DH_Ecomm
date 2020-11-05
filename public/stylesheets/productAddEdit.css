@@ -1,0 +1,38 @@
+
+.todoCreate{
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url(../imagenes/fondo.jpeg);
+  
+}
+
+.create{
+  width: 94%; 
+  justify-content: center;
+  border: gray 1px solid;
+  border-radius: 5px;
+  height: fit-content;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  background-color: white; 
+}
+
+.btnEliminar{
+  margin-top: 5px;
+}
+
+
+@media (min-width : 426px){
+  
+}
+
+
+

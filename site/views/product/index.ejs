@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/productList.css">
+    <title>Products | SportWear</title>
+    
+    <%- include('../partials/header') %>
+    
+    <section class="sectionProductList"> 
+        
+        <div class="productDetailMainContainer">
+            
+            <div class="order">
+                <div class="show">
+                    <label for="Mostrar">Mostrar</label>
+                    <a href="?limit=5" >5</a>
+                    <a href="?limit=10">10</a>
+                    <a href="?limit=20">20</a>
+                    <a href="?limit=1000">All</a>
+                </div> 
+                
+                <div class="price">
+                    <label for="Precio">Precio</label>
+                    <a href="?order=price&dir=ASC" ><i class="fas fa-arrow-up"></i></a>
+                    <a href="?order=price&dir=DESC"><i class="fas fa-arrow-down"></i></a>
+                </div>
+                
+                <div class="name">
+                    <label for="Nombre">Nombre</label>
+                    <a href="?order=name&dir=ASC" ><i class="fas fa-arrow-up"></i></a>
+                    <a href="?order=name&dir=DESC"><i class="fas fa-arrow-down"></i></a>
+                </div>
+            </div>
+            
+            <% products.forEach(products =>{ %>
+                
+                <div class="productDetailContainer">
+                    
+                    <div class="productImagen">
+                        <a href="/product/cart/<%= products.id %>">  
+                            <img src= "<%= products.image %>" class="productImages" alt="...">
+                        </div>
+                        
+                        <div class="productList">
+                            
+                            <div class="prodNameContainer">                       
+                                <p class="prodName"><%= products.name %></p>                      
+                            </div>
+                            <div class="precioProducto">
+                                <p class="prodPrice">Precio : $<%= products.price %></p>
+                            </a>
+                        </div> 
+                        <div class= "buttonsProductList">
+                            <form action="/product/cart/<%= products.id %>" method="POST">
+                                <button type="submit" class="btnProdList btn btn-success">Añadir al Carrito</button>
+                            </form>
+                            <!--<button type="submit" class="btnProdList btn btn-success" >Comprar Ahora</button> -->
+                            <% if (locals.logeado) {%>
+                                <button class="btnProdList btn btn-light"><a href="/product/<%= products.id %>/edit">Editar</a></button>
+                                <% } %>                                              
+                            </div>
+                            
+                        </div>
+                        
+                    </div> 
+                    
+                    <% }) %>
+                    
+                    
+                </div>  
+                
+            </section>
+            
+            
+            <%- include('../partials/footer'); %>

@@ -1,0 +1,67 @@
+<%- include('../partials/header'); %>
+
+<link rel="stylesheet" href="/stylesheets/productDetail.css">
+
+<section class="sectionProductDetail">
+   
+    <div class="product-detail-container">
+        <div class="product-detail-container-left">
+            
+            <img class= "prodImg" src= "<%= product.image %>" class="productImages" alt="..." style="padding-right: 20px;";>
+            
+        </div>
+        
+        <div class="product-detail-container-right">
+            
+            <div>
+                <h2><%= product.name %></h2>
+            </div>
+           
+            <div class="precioProducto">
+                <h2>Precio</h2>
+                <h3>$<%= product.price %></h3>
+            </div>
+            
+            <div class="detallesProdDetail">
+               
+                <div><label for=""><h2>Talle</h2></label>
+                    <div>
+                        <select class="selectorProducto" name="talle" id="talle">
+                           <option value="##">---</option>
+                           <option value="XS">Extra Small</option>
+                           <option value="S">Small</option>
+                           <option value="M">Medium</option>
+                           <option value="L">Large</option>
+                           <option value="XL">Extra Large</option>
+                        </select>
+                    </div>
+                </div>
+                   
+            </div>
+                    
+                <div>
+                    <button type=" submit" class="btnProdDetail btn btn-secondary">Añadir al Carrito</button> 
+                    <button type="submit" class="btnProdDetail btn btn-success">Comprar Ahora</button>
+                    <% if (locals.logeado) {%>
+                    <a class="btnProdDetail btn btn-link" href="/product/<%= product.id %>/edit">Editar</a>
+                    <% } %>
+                </div>
+        </div> 
+            
+        <div class="product-detail-container-bottom">
+            <div>       
+                <p><label for=""><h3>Descripcion</h3></label></p>
+                 <p class="coment"><%= product.description %></p> 
+            </div>
+                    
+            <div>       
+                <p><label for=""><h3>Consultas</h3></label></p>
+                <textarea placeholder="Listado de preguntas y respuestas realizadas" name="coment" id=""   class="estilotextarea"></textarea>
+            </div>
+                    
+        </div>
+    </div>       
+            
+</section>     
+        
+        <%- include('../partials/footer') %>

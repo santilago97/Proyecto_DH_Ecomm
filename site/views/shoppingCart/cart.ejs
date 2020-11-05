@@ -1,0 +1,53 @@
+<%- include('../partials/header'); %>
+<link rel="stylesheet" href="/stylesheets/carrito.css">
+
+<section class="carrito">
+  <h1 id="chart-title">Tu Carrito</h1>
+  <div class="chart-container">
+    
+    <% let total = 0 %>
+    <% shoppingCart.forEach(shoppingCart =>{ %>
+
+      <% total = total + shoppingCart.product.price %>
+    
+      <div class="product1-container" id= "product-container"> 
+        <div class="imagenCarrito" class="elemento">
+          <img height="100px" src="<%= shoppingCart.product.image %>">
+        </div>
+        
+        <div class="descripcionProdCarrito" id= "elemento">
+          <h2><%= shoppingCart.product.name %></h2>
+          <p><%= shoppingCart.product.description %></p>
+        </div>
+        
+        <div class="precioProd" id ="elemento">
+          <h3 class="precio"> $</h3>
+          <h3 class="precio" id="price"> <%= shoppingCart.product.price %></h3>
+        </div>
+        
+      </div>
+      
+      <% }) %>
+      
+      
+    </div>
+    
+    <div>
+      <div class="total-container">
+        <h2 class="precio"> $</h3>
+          <h2 id="total" class="precio"> <%= total %> </h2>
+          <form method="POST">
+            <script
+              src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
+             data-preference-id='<%= global.id %>'> 
+            </script>
+          </form>
+          <a class="buttons btn btn-secondary" href="/product">Seguir comprando</a>
+        </div>
+      </div>
+      
+    </section>
+
+    
+    <%- include('../partials/footer') %>
+    
